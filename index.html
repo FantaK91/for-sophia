@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f48fb3" />
+  <title>For Sophia</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app" id="app">
+    <section class="screen active pink" data-screen="0">
+      <img class="page-art" src="page1.png" alt="Carta para ti, sobre cerrado" />
+      <button class="tap-zone" data-next aria-label="Abrir carta"></button>
+    </section>
+
+    <section class="screen pink" data-screen="1">
+      <img class="page-art" src="page2.png" alt="Sobre abierto con carta" />
+      <button class="tap-zone" data-next aria-label="Leer la carta"></button>
+    </section>
+
+    <section class="screen pink" data-screen="2">
+      <img class="page-art" src="page3.png" alt="Carta completa con regalo" />
+      <button class="gift-zone" data-next aria-label="Abrir regalo"></button>
+    </section>
+
+    <section class="screen dark stage-lights" data-screen="3">
+      <img class="page-art" src="page4.png" alt="Regalo sorpresa" />
+      <button class="gift-zone" data-next aria-label="Abrir gift card"></button>
+    </section>
+
+    <section class="screen dark video-screen" data-screen="4">
+      <video class="bg-video" id="videoA" playsinline preload="auto" loop muted>
+        <source src="tung_tung.mp4" type="video/mp4" />
+      </video>
+      <audio id="audioA" preload="auto" loop>
+        <source src="bg_audio.mp3" type="audio/mpeg" />
+      </audio>
+      <div class="dark-film stronger"></div>
+      <div class="spotlights"></div>
+      <img class="page-art card-layer front-code" src="code_front.png" alt="Gift card Roblox" />
+      <button class="tap-zone" data-next aria-label="Revelar código"></button>
+    </section>
+
+    <section class="screen dark video-screen final" data-screen="5">
+      <video class="bg-video" id="videoB" playsinline preload="auto" loop muted>
+        <source src="tung_tung.mp4" type="video/mp4" />
+      </video>
+      <audio id="audioB" preload="auto" loop>
+        <source src="bg_audio.mp3" type="audio/mpeg" />
+      </audio>
+      <div class="dark-film stronger"></div>
+      <div class="spotlights"></div>
+      <img class="page-art card-layer back-code" src="code_back.png" alt="Código de la gift card" />
+      <div class="hint">Toca para seguir</div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
