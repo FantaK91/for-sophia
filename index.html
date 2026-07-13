@@ -1,67 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <meta name="theme-color" content="#ffdde9" />
-  <title>Carta de 5 meses</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f48fb3" />
+  <title>Carta para ti</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <main class="app">
-    <div class="scene" id="scene">
-      <div class="title">5 months!! ❤️</div>
-      <div class="subtitle">Toca la carta para abrirla</div>
-      <div class="hearts" id="hearts"></div>
+    <section class="stage active" data-stage="0" aria-label="Carta para ti">
+      <img class="stage-image" src="assets/page1.png" alt="Carta para ti, sobre cerrado" />
+      <button class="hotspot full" aria-label="Abrir carta" data-next></button>
+    </section>
 
-      <section class="screen active open" id="screen1" aria-label="Sobre cerrado">
-        <div class="envelope-wrap">
-          <div class="envelope-card" id="openEnvelopeBtn" role="button" aria-label="Abrir sobre" tabindex="0">
-            <div class="back"></div>
-            <div class="front-l"></div>
-            <div class="front-r"></div>
-            <div class="front-b"></div>
-            <div class="paper"></div>
-            <div class="flap"></div>
-            <div class="stamp"></div>
-            <div class="envelope-title">A letter for you</div>
-            <div class="envelope-sub">Tap on the envelope to open it</div>
-          </div>
-        </div>
-      </section>
+    <section class="stage" data-stage="1" aria-label="Sobre abierto">
+      <img class="stage-image" src="assets/page2.png" alt="Sobre abierto con carta" />
+      <button class="hotspot full" aria-label="Leer la carta" data-next></button>
+    </section>
 
-      <section class="screen" id="screen2" aria-label="Sobre abierto">
-        <div class="open-envelope" id="openLetterBtn" role="button" aria-label="Abrir carta" tabindex="0">
-          <div class="opened-back"></div>
-          <div class="opened-inner"></div>
-          <div class="opened-letter">
-            <h2 class="floating-text">My love</h2>
-            <p class="note">For your letter</p>
-            <div class="mini-hearts">❤ ❤ ❤</div>
-            <p class="note small-space">Click on the letter to read it</p>
-          </div>
-          <div class="opened-outer"></div>
-        </div>
-      </section>
+    <section class="stage" data-stage="2" aria-label="Carta principal">
+      <img class="stage-image" src="assets/page3.png" alt="Carta completa con regalo" />
+      <button class="hotspot gift" aria-label="Abrir regalo" data-next></button>
+    </section>
 
-      <section class="screen" id="screen3" aria-label="Carta final">
-        <div class="letter-page">
-          <div class="letter-sheet">
-            <h2 class="letter-top">Mi amor ❤️</h2>
-            <p class="letter-body" id="letterText">Gracias por estos 5 meses tan bonitos, aunque no nos pudimos ver quise hacerte esta cartita para recordarte que eres una persona maravillosa y cada día me haces más feliz. Gracias por todo el amor, el cariño y por siempre estar. Te amo muchísimo.</p>
-          </div>
+    <section class="stage stage-dark" data-stage="3" aria-label="Regalo sorpresa">
+      <img class="stage-image" src="assets/page4.png" alt="Regalo sorpresa" />
+      <button class="hotspot gift" aria-label="Abrir gift card" data-next></button>
+    </section>
 
-          <div class="gift-card">
-            <div class="small">Y ahora...</div>
-            <div class="big">te dejo este regalito</div>
-            <button class="gift-btn" id="giftBtn">Abrir gift card</button>
-            <div class="small">Espero que te guste ❤️</div>
-          </div>
-        </div>
-      </section>
+    <section class="stage stage-dark" data-stage="4" aria-label="Gift card Roblox">
+      <img class="stage-image card-image card-front" src="assets/code-front.png" alt="Gift card Roblox" />
+      <button class="hotspot full" aria-label="Revelar código" data-next></button>
+    </section>
 
-      <div class="tap-hint" id="tapHint">Toca para continuar</div>
-    </div>
+    <section class="stage stage-dark video-stage" data-stage="5" aria-label="Código de la gift card">
+      <video class="bg-video" id="bgVideo" playsinline preload="auto" loop>
+        <source src="assets/tung-tung.mp4" type="video/mp4" />
+      </video>
+      <div class="dark-overlay"></div>
+      <img class="stage-image card-image card-code" src="assets/code-back.png" alt="Código de la gift card" />
+      <button class="hotspot full" aria-label="Continuar al video" data-next></button>
+    </section>
+
+    <section class="stage stage-dark video-stage final" data-stage="6" aria-label="Video final">
+      <video class="bg-video" id="bgVideoFinal" playsinline preload="auto" loop>
+        <source src="assets/tung-tung.mp4" type="video/mp4" />
+      </video>
+      <div class="dark-overlay stronger"></div>
+      <img class="stage-image card-image card-code final-code" src="assets/code-back.png" alt="Código sobre video" />
+    </section>
+
+    <div class="corner-glow corner-a"></div>
+    <div class="corner-glow corner-b"></div>
+    <div class="corner-glow corner-c"></div>
+    <div class="corner-glow corner-d"></div>
   </main>
 
   <script src="script.js"></script>

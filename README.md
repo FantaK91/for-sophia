@@ -1,21 +1,23 @@
 # Carta interactiva móvil
 
-Proyecto listo para GitHub Pages.
-
-## Cómo usar
-1. Sube todos los archivos a un repositorio de GitHub.
-2. Activa GitHub Pages en `Settings > Pages`.
-3. Elige la rama `main` y la carpeta raíz (`/root`).
-4. Abre la URL que te entregue GitHub.
+Proyecto listo para subir a GitHub Pages.
 
 ## Estructura
 - `index.html`
 - `style.css`
 - `script.js`
+- `assets/`
 
-## Personalización rápida
-Cambia el texto en `index.html`:
-- Título
-- Mensaje principal
-- Texto de la gift card
+## Cómo publicarlo en GitHub Pages
+1. Crea un repositorio nuevo en GitHub.
+2. Sube todos los archivos de esta carpeta.
+3. Ve a **Settings** → **Pages**.
+4. En **Source**, elige:
+   - Branch: `main`
+   - Folder: `/ (root)`
+5. Guarda y espera un minuto.
 
+## Notas
+- La pantalla final usa el mismo video con audio.
+- Funciona mejor en móvil.
+- No agregué ningún detalle sorpresa extra.
